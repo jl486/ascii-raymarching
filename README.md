@@ -1,2 +1,2 @@
 # ascii-raymarching
- Raymarching rendered in ASCII characters
+ Raymarching rendered using ASCII characters
