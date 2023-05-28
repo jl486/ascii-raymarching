@@ -1,8 +1,6 @@
-#ifndef VECTOR3_H
-#define VECTOR3_H
+#pragma once
 
-struct Vector3
-{
+struct Vector3 {
     float x;
     float y;
     float z;
@@ -10,14 +8,15 @@ struct Vector3
     float length();
     void normalize();
     
-    Vector3 operator*(float fac);
+    // binary operations
+    Vector3 operator+(const Vector3 other) const;
+    Vector3 operator-(const Vector3 other) const;
 
-    Vector3 operator+(Vector3 other);
-    Vector3 operator-(Vector3 other);
+    Vector3 operator*(const float fac) const;
 
+    // unary operations
+    Vector3 operator-() const;
 
 private:
     float sqrt(float n);
 };
-
-#endif
